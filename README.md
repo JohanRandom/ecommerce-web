@@ -2,6 +2,9 @@
 
 Frontend moderno de ecommerce desarrollado con React, Tailwind CSS y autenticación JWT, consumiendo una API REST creada con Spring Boot.
 
+🌍 Demo en vivo:  
+👉 https://ecommerce-web-gamma-one.vercel.app/
+
 ---
 
 ## 🚀 Características
