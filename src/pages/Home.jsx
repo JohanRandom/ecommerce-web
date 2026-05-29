@@ -19,7 +19,7 @@ function Home() {
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    // Esta peticion mantiene el frontend conectado al backend real del ecommerce.
+    // Esta petición mantiene el frontend conectado al backend real del ecommerce.
     api.get("/products")
       .then(response => {
         setProducts(response.data);
@@ -27,7 +27,7 @@ function Home() {
       })
       .catch(error => {
         console.error(error);
-        setErrorMessage("No pudimos cargar los productos. Intenta nuevamente en unos minutos.");
+        setErrorMessage("No pudimos cargar los productos. Inténtalo nuevamente en unos minutos.");
       })
       .finally(() => {
         setIsLoading(false);
@@ -50,7 +50,7 @@ function Home() {
             </h1>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-              Catalogo dinamico desde backend, carrito persistente en el navegador y checkout protegido con JWT.
+              Catálogo dinámico desde backend, carrito persistente en el navegador y checkout protegido con JWT.
             </p>
 
             <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
@@ -68,7 +68,7 @@ function Home() {
                   JWT
                 </span>
                 <span className="text-sm font-medium text-slate-500">
-                  autenticacion
+                  autenticación
                 </span>
               </div>
 
@@ -83,12 +83,12 @@ function Home() {
             </div>
           </div>
 
-          <div className="relative overflow-hidden rounded-[2rem] border border-white bg-slate-950 p-8 shadow-2xl">
+          <div className="relative overflow-hidden rounded-4xl border border-white bg-slate-950 p-8 shadow-2xl">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.45),transparent_16rem)]" />
-            <div className="relative grid place-items-center rounded-[1.5rem] bg-white/5 p-10">
+            <div className="relative grid place-items-center rounded-3xl bg-white/5 p-10">
               <img
                 src={heroImage}
-                alt="Ilustracion abstracta de capas tecnologicas"
+                alt="Ilustración abstracta de capas tecnológicas"
                 className="h-56 w-auto drop-shadow-2xl"
               />
             </div>
@@ -99,7 +99,7 @@ function Home() {
           <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-sm font-bold uppercase tracking-[0.2em] text-indigo-700">
-                Catalogo
+                Catálogo
               </p>
 
               <h2 className="mt-2 text-3xl font-black tracking-tight text-slate-950">
@@ -108,7 +108,7 @@ function Home() {
             </div>
 
             <p className="max-w-xl text-sm leading-6 text-slate-500">
-              Si luego agregas imagenes en Supabase o en el backend, estas tarjetas ya estan preparadas para mostrarlas.
+              Si luego agregas imágenes en Supabase o en el backend, estas tarjetas ya están preparadas para mostrarlas.
             </p>
           </div>
 
@@ -132,10 +132,10 @@ function Home() {
           {!isLoading && !errorMessage && products.length === 0 && (
             <div className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center shadow-sm">
               <h3 className="text-2xl font-black text-slate-950">
-                Aun no hay productos publicados
+                Aún no hay productos publicados
               </h3>
               <p className="mt-2 text-slate-500">
-                Cuando el backend devuelva productos, apareceran automaticamente en este catalogo.
+                Cuando el backend devuelva productos, aparecerán automáticamente en este catálogo.
               </p>
             </div>
           )}
@@ -150,7 +150,7 @@ function Home() {
                     key={product.id}
                     className="group overflow-hidden rounded-3xl border border-white bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-2xl"
                   >
-                    <div className="relative aspect-[4/3] overflow-hidden bg-slate-100">
+                    <div className="relative aspect-4/3 overflow-hidden bg-slate-100">
                       {imageUrl ? (
                         <img
                           src={imageUrl}

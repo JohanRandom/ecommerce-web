@@ -7,7 +7,7 @@ import Cart from "./pages/Cart";
 function App() {
   return (
     <BrowserRouter>
-      {/* React Router mantiene separadas las pantallas sin recargar la pagina. */}
+      {/* React Router mantiene separadas las pantallas sin recargar la página. */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />

@@ -38,7 +38,7 @@ function Navbar() {
           </span>
         </Link>
 
-        {/* NavLink permite resaltar automaticamente la pagina actual. */}
+        {/* NavLink permite resaltar automáticamente la página actual. */}
         <div className="flex flex-wrap items-center gap-2">
           <NavLink
             to="/"

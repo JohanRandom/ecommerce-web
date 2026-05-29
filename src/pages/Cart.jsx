@@ -25,7 +25,7 @@ function Cart() {
       const token = localStorage.getItem("token");
 
       if (!token) {
-        alert("Debes iniciar sesion");
+        alert("Debes iniciar sesión");
         return;
       }
 
@@ -73,10 +73,10 @@ function Cart() {
         {cartItems.length === 0 ? (
           <section className="rounded-3xl border border-dashed border-slate-300 bg-white p-10 text-center shadow-sm">
             <h2 className="text-2xl font-black text-slate-950">
-              Tu carrito esta vacio
+              Tu carrito está vacío
             </h2>
             <p className="mx-auto mt-3 max-w-xl text-slate-500">
-              Agrega productos desde el catalogo para probar el flujo completo de carrito y checkout.
+              Agrega productos desde el catálogo para probar el flujo completo de carrito y checkout.
             </p>
             <Link
               to="/"
@@ -128,7 +128,7 @@ function Cart() {
                   <span>{cartItems.length}</span>
                 </div>
                 <div className="flex justify-between">
-                  <span>Envio</span>
+                  <span>Envío</span>
                   <span>Por definir</span>
                 </div>
               </div>

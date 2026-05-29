@@ -14,7 +14,7 @@ function CartProvider({ children }) {
   });
 
   useEffect(() => {
-    // Cada cambio del carrito se guarda para no perderlo al refrescar la pagina.
+    // Cada cambio del carrito se guarda para no perderlo al refrescar la página.
     localStorage.setItem(
       "cart",
       JSON.stringify(cartItems)
