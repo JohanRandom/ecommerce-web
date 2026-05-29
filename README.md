@@ -1,26 +1,21 @@
-# 🛒 Ecommerce Web
+# Ecommerce Web
 
-Frontend moderno de ecommerce desarrollado con React, Tailwind CSS y autenticación JWT, consumiendo una API REST creada con Spring Boot.
+Frontend de ecommerce desarrollado con React, Vite y Tailwind CSS. La aplicacion consume una API REST creada con Spring Boot, permite iniciar sesion con JWT, listar productos dinamicos y gestionar un carrito persistente.
 
-🌍 Demo en vivo:  
-👉 https://ecommerce-web-gamma-one.vercel.app/
+Demo en vivo:
+https://ecommerce-web-gamma-one.vercel.app/
 
----
+## Caracteristicas
 
-## 🚀 Características
+- Catalogo de productos cargado desde el backend.
+- Carrito de compras persistente con localStorage.
+- Autenticacion con JWT.
+- Checkout conectado a endpoint protegido.
+- Interfaz responsive con estados de carga, error y carrito vacio.
+- Navegacion entre paginas con React Router.
+- Estado global del carrito con Context API.
 
-- Autenticación de usuarios con JWT
-- Listado dinámico de productos desde la API
-- Carrito de compras persistente
-- Sistema de checkout real
-- Interfaz moderna y responsive
-- Navegación con React Router
-- Manejo de estado global con Context API
-- Backend desplegado en la nube
-
----
-
-## 🧩 Tecnologías utilizadas
+## Tecnologias
 
 ### Frontend
 
@@ -30,7 +25,7 @@ Frontend moderno de ecommerce desarrollado con React, Tailwind CSS y autenticaci
 - Axios
 - React Router DOM
 
-### Backend
+### Backend relacionado
 
 - Spring Boot REST API
 - JWT Authentication
@@ -38,27 +33,17 @@ Frontend moderno de ecommerce desarrollado con React, Tailwind CSS y autenticaci
 - Supabase
 - Render
 
----
-
-## 📸 Capturas de pantalla
-
-Próximamente...
-
----
-
-## 🔗 API Backend
+## API Backend
 
 Este frontend consume la siguiente API:
 
-👉 https://ecommerce-api-ln7m.onrender.com
+https://ecommerce-api-ln7m.onrender.com
 
 Repositorio del backend:
 
-👉 https://github.com/JohanRandom/ecommerce-api
+https://github.com/JohanRandom/ecommerce-api
 
----
-
-## ⚙️ Instalación
+## Instalacion
 
 Clonar el repositorio:
 
@@ -78,40 +63,15 @@ Ejecutar el servidor de desarrollo:
 npm run dev
 ```
 
----
+## Flujo de autenticacion
 
-## 🔐 Autenticación
+Despues del login, el backend genera un token JWT. El frontend guarda ese token en localStorage y lo envia como Bearer Token cuando se realiza el checkout.
 
-La aplicación utiliza autenticación JWT.
+## Carrito de compras
 
-Después del login:
+El carrito permite agregar productos, acumular cantidades, eliminar elementos y conservar la informacion al recargar la pagina usando localStorage.
 
-- el backend genera un token JWT
-- el frontend guarda el token en localStorage
-- las peticiones protegidas incluyen el Bearer Token
+## Autor
 
----
-
-## 🛒 Carrito de compras
-
-El carrito:
-
-- permite manejo de cantidades
-- persiste utilizando localStorage
-- permite realizar compras reales contra la API backend
-
----
-
-## ☁️ Despliegue
-
-Frontend pendiente de despliegue.
-
-Backend desplegado en Render.
-
----
-
-## 👨‍💻 Autor
-
-Johan Moreno
-
+Johan Moreno  
 Desarrollador de Software

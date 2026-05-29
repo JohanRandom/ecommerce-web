@@ -5,21 +5,14 @@ import Login from "./pages/Login";
 import Cart from "./pages/Cart";
 
 function App() {
-
   return (
-
     <BrowserRouter>
-
+      {/* React Router mantiene separadas las pantallas sin recargar la pagina. */}
       <Routes>
-
         <Route path="/" element={<Home />} />
-
         <Route path="/login" element={<Login />} />
-
         <Route path="/cart" element={<Cart />} />
-
       </Routes>
-
     </BrowserRouter>
   );
 }

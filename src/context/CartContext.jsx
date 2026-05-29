@@ -1,91 +1,76 @@
 import {
-    createContext,
-    useEffect,
-    useState
+  useEffect,
+  useState
 } from "react";
-
-export const CartContext = createContext();
+import { CartContext } from "./cartContext";
 
 function CartProvider({ children }) {
+  const [cartItems, setCartItems] = useState(() => {
+    const savedCart = localStorage.getItem("cart");
 
-    const [cartItems, setCartItems] = useState(() => {
+    return savedCart
+      ? JSON.parse(savedCart)
+      : [];
+  });
 
-        const savedCart = localStorage.getItem("cart");
+  useEffect(() => {
+    // Cada cambio del carrito se guarda para no perderlo al refrescar la pagina.
+    localStorage.setItem(
+      "cart",
+      JSON.stringify(cartItems)
+    );
+  }, [cartItems]);
 
-        return savedCart
-            ? JSON.parse(savedCart)
-            : [];
+  function addToCart(product) {
+    setCartItems(prevItems => {
+      const existingItem = prevItems.find(
+        item => item.id === product.id
+      );
+
+      if (existingItem) {
+        return prevItems.map(item =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
+      }
+
+      return [
+        ...prevItems,
+        { ...product, quantity: 1 }
+      ];
     });
+  }
 
-    useEffect(() => {
-
-        localStorage.setItem(
-            "cart",
-            JSON.stringify(cartItems)
-        );
-
-    }, [cartItems]);
-
-    function addToCart(product) {
-
-        setCartItems(prevItems => {
-
-            const existingItem = prevItems.find(
-                item => item.id === product.id
-            );
-
-            if (existingItem) {
-
-                return prevItems.map(item =>
-
-                    item.id === product.id
-                        ? { ...item, quantity: item.quantity + 1 }
-                        : item
-                );
-            }
-
-            return [
-                ...prevItems,
-                { ...product, quantity: 1 }
-            ];
-        });
-    }
-
-    function removeFromCart(productId) {
-
-        setCartItems(prevItems =>
-            prevItems.filter(item => item.id !== productId)
-        );
-    }
-
-    function clearCart() {
-
-        setCartItems([]);
-    }
-
-    const total = cartItems.reduce(
-
-        (sum, item) => sum + (item.price * item.quantity),
-
-        0
+  function removeFromCart(productId) {
+    setCartItems(prevItems =>
+      prevItems.filter(item => item.id !== productId)
     );
+  }
 
-    return (
+  function clearCart() {
+    setCartItems([]);
+  }
 
-        <CartContext.Provider
-            value={{
-                cartItems,
-                addToCart,
-                removeFromCart,
-                total,
-                clearCart
-            }}
-        >
+  // Total calculado a partir del estado actual; evita guardar datos duplicados.
+  const total = cartItems.reduce(
+    (sum, item) => sum + (item.price * item.quantity),
+    0
+  );
 
-            {children}
-
-        </CartContext.Provider>
-    );
+  return (
+    <CartContext.Provider
+      value={{
+        cartItems,
+        addToCart,
+        removeFromCart,
+        total,
+        clearCart
+      }}
+    >
+      {children}
+    </CartContext.Provider>
+  );
 }
 
 export default CartProvider;
