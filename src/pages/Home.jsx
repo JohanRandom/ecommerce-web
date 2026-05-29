@@ -107,9 +107,6 @@ function Home() {
               </h2>
             </div>
 
-            <p className="max-w-xl text-sm leading-6 text-slate-500">
-              Si luego agregas imágenes en Supabase o en el backend, estas tarjetas ya están preparadas para mostrarlas.
-            </p>
           </div>
 
           {isLoading && (
