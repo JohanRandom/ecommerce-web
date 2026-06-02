@@ -1,14 +1,13 @@
-# 🛒 Ecommerce Web
+# Ecommerce Web
+
+![Vista previa del proyecto](./public/assets/preview.png)
 
 Frontend de ecommerce desarrollado con React, Vite y Tailwind CSS.  
 La aplicación consume una API REST creada con Spring Boot, permite autenticación con JWT, gestión de carrito persistente y realización de compras reales conectadas a PostgreSQL.
 
-🌍 Demo en vivo:  
-https://ecommerce-web-gamma-one.vercel.app/
-
 ---
 
-# 🚀 Características
+# Características
 
 - Catálogo dinámico de productos cargado desde API REST.
 - Autenticación segura con JWT.
@@ -23,7 +22,7 @@ https://ecommerce-web-gamma-one.vercel.app/
 
 ---
 
-# 🧩 Tecnologías utilizadas
+# Tecnologías utilizadas
 
 ## Frontend
 
@@ -43,26 +42,26 @@ https://ecommerce-web-gamma-one.vercel.app/
 - Supabase
 - Render
 
-## Deploy
+## Despliegue
 
 - Vercel
 - Render
 
 ---
 
-# 🔗 Enlaces del proyecto
+# Enlaces del proyecto
 
-## ⚙️ API Backend
+## API Backend
 
 https://ecommerce-api-ln7m.onrender.com
 
-## 💻 Repositorio Backend
+## Repositorio Backend
 
 https://github.com/JohanRandom/ecommerce-api
 
 ---
 
-# 🧪 Credenciales de prueba
+# Credenciales de prueba
 
 ## Usuario administrador
 
@@ -84,7 +83,7 @@ User123\*
 
 ---
 
-## Cuenta tester
+## Cuenta de prueba
 
 Email:
 demo@techstore.com
@@ -94,7 +93,7 @@ Demo123\*
 
 ---
 
-# ⚙️ Instalación local
+# Instalación local
 
 Clonar el repositorio:
 
@@ -122,42 +121,42 @@ npm run dev
 
 ---
 
-# 🔐 Flujo de autenticación
+# Flujo de autenticación
 
-Después del login:
+Después del inicio de sesión:
 
-1. el backend valida las credenciales
-2. se genera un token JWT
-3. el frontend guarda el token en localStorage
-4. las peticiones protegidas incluyen Bearer Token
+1. El backend valida las credenciales.
+2. Se genera un token JWT.
+3. El frontend almacena el token en localStorage.
+4. Las peticiones protegidas incluyen el Bearer Token.
 
 ---
 
-# 🛒 Carrito de compras
+# Carrito de compras
 
 El carrito permite:
 
-- agregar productos
-- acumular cantidades automáticamente
-- eliminar elementos
-- persistir información utilizando localStorage
-- calcular el total dinámicamente
-- realizar compras reales conectadas al backend
+- Agregar productos.
+- Acumular cantidades automáticamente.
+- Eliminar elementos.
+- Persistir información utilizando localStorage.
+- Calcular el total dinámicamente.
+- Realizar compras reales conectadas al backend.
 
 ---
 
-# 🧾 Sistema de órdenes
+# Sistema de órdenes
 
 Al finalizar una compra:
 
-1. el frontend envía los productos al backend
-2. el backend valida el JWT
-3. se crea una orden asociada al usuario autenticado
-4. la información se almacena en PostgreSQL
+1. El frontend envía los productos al backend.
+2. El backend valida el JWT.
+3. Se crea una orden asociada al usuario autenticado.
+4. La información se almacena en PostgreSQL.
 
 ---
 
-# ☁️ Despliegue
+# Despliegue
 
 ## Frontend
 
@@ -173,7 +172,7 @@ https://ecommerce-api-ln7m.onrender.com
 
 ---
 
-# 👨‍💻 Autor
+# Autor
 
 Johan Moreno
 
