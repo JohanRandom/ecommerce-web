@@ -1,3 +1,7 @@
+/**
+ * Este objeto contiene el mapeo de identificadores de producto con sus respectivas rutas de imagen locales.
+ * Se utiliza para asegurar que el catalogo muestre imagenes de alta calidad incluso si el servidor no las proporciona.
+ */
 export const PRODUCT_IMAGES = {
   1: "/images/products/iphone.webp",
   2: "/images/products/macbook.webp",

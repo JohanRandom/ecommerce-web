@@ -19,7 +19,7 @@ function Home() {
   const { addToCart } = useContext(CartContext);
 
   useEffect(() => {
-    // Esta petición mantiene el frontend conectado al backend real del ecommerce.
+    // Se realiza una peticion al servidor para obtener la lista de productos disponibles en el catalogo.
     api.get("/products")
       .then(response => {
         setProducts(response.data);

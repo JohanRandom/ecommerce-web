@@ -14,7 +14,7 @@ function CartProvider({ children }) {
   });
 
   useEffect(() => {
-    // Cada cambio del carrito se guarda para no perderlo al refrescar la página.
+    // Se guarda el estado actual del carrito en el almacenamiento local cada vez que hay un cambio para mantener la persistencia.
     localStorage.setItem(
       "cart",
       JSON.stringify(cartItems)
@@ -23,6 +23,7 @@ function CartProvider({ children }) {
 
   function addToCart(product) {
     setCartItems(prevItems => {
+      // Se busca si el producto ya existe en el carrito para actualizar su cantidad.
       const existingItem = prevItems.find(
         item => item.id === product.id
       );
@@ -35,6 +36,7 @@ function CartProvider({ children }) {
         );
       }
 
+      // Si el producto es nuevo, se agrega con una cantidad inicial de uno.
       return [
         ...prevItems,
         { ...product, quantity: 1 }
@@ -43,16 +45,18 @@ function CartProvider({ children }) {
   }
 
   function removeFromCart(productId) {
+    // Se eliminan todos los elementos que coincidan con el identificador proporcionado.
     setCartItems(prevItems =>
       prevItems.filter(item => item.id !== productId)
     );
   }
 
   function clearCart() {
+    // Se restablece el carrito a una lista vacia para limpiar la seleccion.
     setCartItems([]);
   }
 
-  // Total calculado a partir del estado actual; evita guardar datos duplicados.
+  // El calculo del valor total se realiza de forma dinamica basandose en el precio y la cantidad de cada producto.
   const total = cartItems.reduce(
     (sum, item) => sum + (item.price * item.quantity),
     0

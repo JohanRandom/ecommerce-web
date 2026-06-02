@@ -19,7 +19,7 @@ function Login() {
 
       const token = response.data.token;
 
-      // El token se guarda para usarlo después en rutas protegidas como checkout.
+      // El token de autenticacion se almacena localmente para ser utilizado en las peticiones que requieren permisos especiales.
       localStorage.setItem("token", token);
 
       setMessage("Login exitoso. Redirigiendo al catálogo...");

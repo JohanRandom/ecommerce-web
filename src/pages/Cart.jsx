@@ -30,7 +30,7 @@ function Cart() {
         return;
       }
 
-      // El backend espera solo el id del producto y la cantidad comprada.
+      // Se preparan los datos de la orden incluyendo unicamente los identificadores de los productos y sus cantidades.
       const orderData = {
         products: cartItems.map(item => ({
           productId: item.id,
