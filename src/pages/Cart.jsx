@@ -3,6 +3,7 @@ import { useContext } from "react";
 import Navbar from "../components/Navbar";
 import { CartContext } from "../context/cartContext";
 import api from "../api/axios";
+import { PRODUCT_IMAGES } from "../utils/productImages";
 
 function formatCurrency(value) {
   return new Intl.NumberFormat("es-CO", {
@@ -93,19 +94,26 @@ function Cart() {
                   key={item.id}
                   className="flex flex-col gap-5 rounded-3xl border border-white bg-white p-5 shadow-sm sm:flex-row sm:items-center sm:justify-between"
                 >
-                  <div>
-                    <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-700">
-                      Producto
-                    </p>
-                    <h2 className="mt-2 text-2xl font-black text-slate-950">
-                      {item.name}
-                    </h2>
-                    <p className="mt-1 text-sm text-slate-500">
-                      Cantidad: {item.quantity}
-                    </p>
-                    <p className="mt-3 text-xl font-black text-slate-950">
-                      {formatCurrency(item.price * item.quantity)}
-                    </p>
+                  <div className="flex flex-col gap-4 sm:flex-row sm:items-center">
+                    <img
+                      src={item.imageUrl || item.image || PRODUCT_IMAGES[item.id]}
+                      alt={item.name}
+                      className="h-20 w-20 rounded-2xl object-cover"
+                    />
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-[0.2em] text-indigo-700">
+                        Producto
+                      </p>
+                      <h2 className="mt-2 text-2xl font-black text-slate-950">
+                        {item.name}
+                      </h2>
+                      <p className="mt-1 text-sm text-slate-500">
+                        Cantidad: {item.quantity}
+                      </p>
+                      <p className="mt-3 text-xl font-black text-slate-950">
+                        {formatCurrency(item.price * item.quantity)}
+                      </p>
+                    </div>
                   </div>
 
                   <button

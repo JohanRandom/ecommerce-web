@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from "react";
 import api from "../api/axios";
-import heroImage from "../assets/hero.png";
 import Navbar from "../components/Navbar";
 import { CartContext } from "../context/cartContext";
+import { PRODUCT_IMAGES } from "../utils/productImages";
 
 function formatCurrency(value) {
   return new Intl.NumberFormat("es-CO", {
@@ -85,11 +85,11 @@ function Home() {
 
           <div className="relative overflow-hidden rounded-4xl border border-white bg-slate-950 p-8 shadow-2xl">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.45),transparent_16rem)]" />
-            <div className="relative grid place-items-center rounded-3xl bg-white/5 p-10">
+            <div className="relative grid place-items-center rounded-3xl bg-white/5 p-4">
               <img
-                src={heroImage}
-                alt="Ilustración abstracta de capas tecnológicas"
-                className="h-56 w-auto drop-shadow-2xl"
+                src="/images/hero.webp"
+                alt="Product Showcase"
+                className="h-64 w-full rounded-2xl object-cover shadow-2xl"
               />
             </div>
           </div>
@@ -140,7 +140,7 @@ function Home() {
           {!isLoading && !errorMessage && products.length > 0 && (
             <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
               {products.map(product => {
-                const imageUrl = product.imageUrl || product.image;
+                const imageUrl = product.imageUrl || product.image || PRODUCT_IMAGES[product.id];
 
                 return (
                   <article
