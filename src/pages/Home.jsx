@@ -39,58 +39,45 @@ function Home() {
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
-        <section className="grid items-center gap-10 py-8 lg:grid-cols-[1.1fr_0.9fr] lg:py-14">
-          <div>
-            <p className="mb-4 inline-flex rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm">
-              Tienda demo conectada a API REST
-            </p>
+        <section className="flex flex-col items-center py-12 text-center lg:py-20">
+          <p className="mb-6 inline-flex rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm">
+            Tienda demo conectada a API REST
+          </p>
 
-            <h1 className="max-w-3xl text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
-              Ecommerce moderno para mostrar frontend, login y carrito real.
-            </h1>
+          <h1 className="max-w-4xl text-4xl font-black leading-tight tracking-tight text-slate-950 sm:text-5xl lg:text-6xl">
+            Ecommerce moderno para mostrar frontend, login y carrito real.
+          </h1>
 
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
-              Catálogo dinámico desde backend, carrito persistente en el navegador y checkout protegido con JWT.
-            </p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+            Catálogo dinámico desde backend, carrito persistente en el navegador y checkout protegido con JWT.
+          </p>
 
-            <div className="mt-8 grid max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
-              <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
-                <span className="block text-2xl font-black text-slate-950">
-                  {products.length}
-                </span>
-                <span className="text-sm font-medium text-slate-500">
-                  productos activos
-                </span>
-              </div>
-
-              <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
-                <span className="block text-2xl font-black text-slate-950">
-                  JWT
-                </span>
-                <span className="text-sm font-medium text-slate-500">
-                  autenticación
-                </span>
-              </div>
-
-              <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
-                <span className="block text-2xl font-black text-slate-950">
-                  API
-                </span>
-                <span className="text-sm font-medium text-slate-500">
-                  Spring Boot
-                </span>
-              </div>
+          <div className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
+            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+              <span className="block text-2xl font-black text-slate-950">
+                {products.length}
+              </span>
+              <span className="text-sm font-medium text-slate-500">
+                productos activos
+              </span>
             </div>
-          </div>
 
-          <div className="relative overflow-hidden rounded-4xl border border-white bg-slate-950 p-8 shadow-2xl">
-            <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(99,102,241,0.45),transparent_16rem)]" />
-            <div className="relative grid place-items-center rounded-3xl bg-white/5 p-4">
-              <img
-                src="/images/hero.webp"
-                alt="Product Showcase"
-                className="h-64 w-full rounded-2xl object-cover shadow-2xl"
-              />
+            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+              <span className="block text-2xl font-black text-slate-950">
+                JWT
+              </span>
+              <span className="text-sm font-medium text-slate-500">
+                autenticación
+              </span>
+            </div>
+
+            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+              <span className="block text-2xl font-black text-slate-950">
+                API
+              </span>
+              <span className="text-sm font-medium text-slate-500">
+                Spring Boot
+              </span>
             </div>
           </div>
         </section>
