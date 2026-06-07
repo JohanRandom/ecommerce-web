@@ -38,9 +38,9 @@ function Home() {
     <div className="min-h-screen">
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-5 py-8 lg:px-8">
-        <section className="flex flex-col items-center py-12 text-center lg:py-20">
-          <p className="mb-6 inline-flex rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm">
+      <main className="mx-auto max-w-7xl px-5 py-6 lg:px-8">
+        <section className="flex flex-col items-center py-8 text-center lg:py-12">
+          <p className="mb-4 inline-flex rounded-full border border-indigo-200 bg-white px-4 py-2 text-sm font-bold text-indigo-700 shadow-sm">
             Tienda demo conectada a API REST
           </p>
 
@@ -48,12 +48,12 @@ function Home() {
             Ecommerce moderno para mostrar frontend, login y carrito real.
           </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-600">
+          <p className="mx-auto mt-4 max-w-2xl text-lg leading-8 text-slate-600">
             Catálogo dinámico desde backend, carrito persistente en el navegador y checkout protegido con JWT.
           </p>
 
-          <div className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-4 sm:grid-cols-3">
-            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+          <div className="mt-6 grid w-full max-w-2xl grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="rounded-xl border border-white bg-white/80 p-4 shadow-sm">
               <span className="block text-2xl font-black text-slate-950">
                 {products.length}
               </span>
@@ -62,7 +62,7 @@ function Home() {
               </span>
             </div>
 
-            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+            <div className="rounded-xl border border-white bg-white/80 p-4 shadow-sm">
               <span className="block text-2xl font-black text-slate-950">
                 JWT
               </span>
@@ -71,7 +71,7 @@ function Home() {
               </span>
             </div>
 
-            <div className="rounded-2xl border border-white bg-white/80 p-4 shadow-sm">
+            <div className="rounded-xl border border-white bg-white/80 p-4 shadow-sm">
               <span className="block text-2xl font-black text-slate-950">
                 API
               </span>
